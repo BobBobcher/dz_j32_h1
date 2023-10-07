@@ -1,0 +1,32 @@
+
+using System;
+using static System.Console;
+class Program
+{
+    static void Main()
+    {
+        Clear();
+        SetCursorPosition(0, 0);
+
+        //объявление и инициализация локальных переменных
+        string A , B, C;
+        int a, b, c, SquareRectangle, SquareArea, namber;
+        Console.Write("Введите сторону А прямоугольника\n"  ); 
+        A = Console.ReadLine();
+        a = Int32.Parse(A);
+
+        Console.Write("Введите сторону B прямоугольника\n");
+        B = Console.ReadLine();
+        b = Int32.Parse(B);
+
+        Console.Write("Введите сторону С квадрата\n");
+        C = Console.ReadLine();
+        c = Int32.Parse(C);
+        SquareArea = c * c;
+        SquareRectangle = a * b;
+        namber = SquareRectangle / SquareArea;
+        WriteLine("количество квадратов, размещённых на прямоугольнике = " + namber);
+        if (SquareRectangle < SquareArea) 
+            WriteLine("В прямоугольнике нельзя разместить ни одного квадрата со стороной C !!!");
+    }
+}
